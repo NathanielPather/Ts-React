@@ -1,6 +1,11 @@
-  export default function HelloComponent(props: {name: string}) {
+  interface HelloComponentProps {
+    name: string
+  }
+  
+  export default function HelloComponent({name}: HelloComponentProps) {
+    // const { name } = props;
     return (
-        <div>Hello {props.name}!</div>
+        <div>Hello {name}!</div>
     )
   }
   

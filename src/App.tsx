@@ -1,13 +1,13 @@
-import HelloComponent from "./HelloComponent";
+import HelloList from "./HelloList";
 
 export default function App() {
+const names = ["Billy", "Sandy", "Bob"]
 
 
   return (
-    <div>
-      <HelloComponent name="billy" />
-      <HelloComponent name="Sandy"/>
-      <HelloComponent name="bob"/>
-    </div>
+    <>
+      <h1>Test App</h1>
+      <HelloList names={names} />
+    </>
   )
 }
