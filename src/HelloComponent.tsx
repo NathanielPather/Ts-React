@@ -1,11 +1,12 @@
   interface HelloComponentProps {
-    name: string
+    name: string,
+    punctuation: string
   }
   
-  export default function HelloComponent({name}: HelloComponentProps) {
+  export default function HelloComponent({name, punctuation}: HelloComponentProps) {
     // const { name } = props;
     return (
-        <div>Hello {name}!</div>
+        <div>Hello {name}{punctuation}</div>
     )
   }
   

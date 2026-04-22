@@ -1,12 +1,17 @@
 import HelloComponent from "./HelloComponent"
 
 interface HelloListProps {
-    names: string[]
+    people: Person[]
 }
 
-export default function HelloList({ names }: HelloListProps) {
-    const hellos = names.map((a, index) => {
-        return <HelloComponent key={index} name={a} />
+interface Person {
+    name: string,
+    punctuation: string
+}
+
+export default function HelloList({ people }: HelloListProps) {
+    const hellos = people.map((person, index) => {
+        return <HelloComponent key={index} name={person.name} punctuation={person.punctuation} />
     })
 
     return (

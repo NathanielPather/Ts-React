@@ -1,13 +1,27 @@
+import Counter from "./Counter";
 import HelloList from "./HelloList";
 
 export default function App() {
-const names = ["Billy", "Sandy", "Bob"]
+const names = [
+  { 
+    name: "Billy",
+    punctuation: "!" 
+  },
+  {
+  name: "Sandy",
+  punctuation: "!!"
+  } ,
+  {
+  name: "Bob",
+  punctuation: "!!!"
+  }]
 
 
   return (
     <>
       <h1>Test App</h1>
-      <HelloList names={names} />
+      <Counter />
+      <HelloList people={names} />
     </>
   )
 }
