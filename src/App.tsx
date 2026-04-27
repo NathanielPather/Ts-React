@@ -1,3 +1,4 @@
+import AlertForm from "./AlertForm";
 import Counter from "./Counter";
 import HelloList from "./HelloList";
 
@@ -20,6 +21,7 @@ const names = [
   return (
     <>
       <h1>Test App</h1>
+      <AlertForm />
       <Counter />
       <HelloList people={names} />
     </>
