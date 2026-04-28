@@ -1,22 +1,24 @@
+import { useState } from "react";
 import AlertForm from "./AlertForm";
 import Counter from "./Counter";
 import HelloList from "./HelloList";
 
-export default function App() {
-const names = [
-  { 
+const listOfNames = [
+  {
     name: "Billy",
-    punctuation: "!" 
+    punctuation: "!"
   },
   {
-  name: "Sandy",
-  punctuation: "!!"
-  } ,
+    name: "Sandy",
+    punctuation: "!!"
+  },
   {
-  name: "Bob",
-  punctuation: "!!!"
+    name: "Bob",
+    punctuation: "!!!"
   }]
 
+export default function App() {
+  const [names, setNames] = useState(listOfNames);
 
   return (
     <>

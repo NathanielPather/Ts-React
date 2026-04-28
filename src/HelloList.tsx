@@ -1,3 +1,6 @@
+// Has a hello form
+// Submitting form adds a new person
+
 import HelloComponent from "./HelloComponent"
 
 interface HelloListProps {
