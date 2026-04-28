@@ -21,7 +21,9 @@ const names = [
   return (
     <>
       <h1>Test App</h1>
-      <AlertForm />
+      <div>
+        <AlertForm />
+      </div>
       <Counter />
       <HelloList people={names} />
     </>
