@@ -21,6 +21,14 @@ const listOfNames: Person[] = [
 
 export default function App() {
   const [names, setNames] = useState(listOfNames);
+  const addName = (newPerson: Person) => {
+    const newNames = [
+      ...names,
+      newPerson
+    ]
+
+    setNames(newNames)
+  }
 
   return (
     <>
@@ -29,7 +37,7 @@ export default function App() {
         {/* <AlertForm /> */}
       </div>
       {/* <Counter /> */}
-      <HelloForm setNames={setNames} names={names}/>
+      <HelloForm addName={addName} />
       <HelloList people={names} />
     </>
   )
