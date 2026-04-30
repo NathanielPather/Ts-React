@@ -1,7 +1,4 @@
-// Has a hello form
-// Submitting form adds a new person
-
-import HelloComponent from "./HelloComponent"
+import HelloItem from "./HelloItem"
 import type { Person } from "./types"
 
 interface HelloListProps {
@@ -11,7 +8,7 @@ interface HelloListProps {
 
 export default function HelloList({ people }: HelloListProps) {
     const hellos = people.map((person, index) => {
-        return <HelloComponent key={index} name={person.name} punctuation={person.punctuation} />
+        return <HelloItem key={index} name={person.name} punctuation={person.punctuation} />
     })
 
     return (
