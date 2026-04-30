@@ -8,7 +8,7 @@ interface HelloListProps {
 
 export default function HelloList({ people }: HelloListProps) {
     const hellos = people.map((person, index) => {
-        return <HelloItem key={index} name={person.name} punctuation={person.punctuation} />
+        return <HelloItem people={people} key={index} name={person.name} punctuation={person.punctuation} />
     })
 
     return (
