@@ -2,15 +2,12 @@
 // Submitting form adds a new person
 
 import HelloComponent from "./HelloComponent"
+import type { Person } from "./types"
 
 interface HelloListProps {
     people: Person[]
 }
 
-interface Person {
-    name: string,
-    punctuation: string
-}
 
 export default function HelloList({ people }: HelloListProps) {
     const hellos = people.map((person, index) => {

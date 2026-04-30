@@ -1,9 +1,11 @@
 import { useState } from "react";
-import AlertForm from "./AlertForm";
-import Counter from "./Counter";
+// import AlertForm from "./AlertForm";
+// import Counter from "./Counter";
 import HelloList from "./HelloList";
+import HelloForm from "./HelloForm";
+import type { Person } from "./types";
 
-const listOfNames = [
+const listOfNames: Person[] = [
   {
     name: "Billy",
     punctuation: "!"
@@ -24,9 +26,10 @@ export default function App() {
     <>
       <h1>Test App</h1>
       <div>
-        <AlertForm />
+        {/* <AlertForm /> */}
       </div>
-      <Counter />
+      {/* <Counter /> */}
+      <HelloForm setNames={setNames} names={names}/>
       <HelloList people={names} />
     </>
   )
